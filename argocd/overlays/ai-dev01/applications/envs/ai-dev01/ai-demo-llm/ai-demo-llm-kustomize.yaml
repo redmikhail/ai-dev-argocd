@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ai-demo-llm-kustomize
+spec:
+  destination:
+    name: osc-cl2
+    namespace: mmikhail-test01
+  project: ai-demos
+  source:
+    path: argocd/ai-llm-demo/kustomize/overlays/single-model
+    repoURL: https://github.com/redmikhail/ai-dev01-demo.git
+    targetRevision: main
