@@ -4,8 +4,8 @@ metadata:
   name: ai-demo-llm-kustomize
 spec:
   destination:
-    name: osc-cl2
-    namespace: mmikhail-test01
+    name: in-cluster
+    namespace: mmikhail-demo
   project: ai-demos
   source:
     path: argocd/ai-llm-demo/kustomize/overlays/single-model

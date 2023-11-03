@@ -6,7 +6,7 @@ spec:
   destination:
     namespace: openshift-gitops
     name: in-cluster
-  project: osc-infra
+  project: argocd-infra
   source:
     path: argocd/overlays/ai-dev01/applications/env/ai-dev01
     repoURL: https://github.com/redmikhail/ai-dev-argocd.git
