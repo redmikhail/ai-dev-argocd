@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ai-demo-llm-kustomize-main
+spec:
+  destination:
+    name: in-cluster
+    namespace: tgis-llm-demo
+  project: ai-demos
+  source:
+    path: argocd/ai-llm-demo/kustomize/overlays/dev
+    repoURL: https://github.com/redmikhail/ai-dev01-demo.git
+    targetRevision: main
+  syncPolicy:
+     automated:
+       prune: true
