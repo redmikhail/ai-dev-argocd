@@ -9,7 +9,7 @@ spec:
   project: ai-demos
   source:
     path: argocd/ai-llm-demo/kustomize/overlays/dev
-    repoURL: https://github.com/redmikhail/ai-dev01-demo.git
+    repoURL: https://github.com/RHEcosystemAppEng/genAI-for-document-generation.git
     targetRevision: main
   # syncPolicy:
   #    automated:
