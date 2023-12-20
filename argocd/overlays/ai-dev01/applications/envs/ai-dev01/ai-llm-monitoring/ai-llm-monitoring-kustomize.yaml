@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ai-llm-monitoring-kustomize
+spec:
+  destination:
+    name: in-cluster
+    namespace: llm-monitoring
+  project: ai-demos
+  source:
+    path: argocd/ai-llm-monitoring/kustomize/overlays/dev
+    repoURL: https://github.com/redmikhail/ai-dev01-demo
+    targetRevision: main
+  # syncPolicy:
+  #    automated:
+  #      prune: true
