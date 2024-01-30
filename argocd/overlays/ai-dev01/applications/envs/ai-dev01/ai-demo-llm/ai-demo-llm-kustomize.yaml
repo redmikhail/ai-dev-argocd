@@ -7,10 +7,15 @@ spec:
     name: in-cluster
     namespace: tgis-llm-demo
   project: ai-demos
+  ignoreDifferences:
+    - jsonPointers:
+        - /data
+      kind: Secret
+      name: huggingface-hub-token
   source:
     path: argocd/ai-llm-demo/kustomize/overlays/dev
     repoURL: https://github.com/RHEcosystemAppEng/genAI-for-document-generation.git
     targetRevision: main
-  # syncPolicy:
-  #    automated:
-  #      prune: true
+  syncPolicy:
+    syncOptions:
+      - RespectIgnoreDifferences=true
